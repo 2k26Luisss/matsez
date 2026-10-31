@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de contraseñas seguras y aleatorias (sin enviar datos)</title>
+<meta name="description" content="Genera contraseñas aleatorias y seguras de 8 a 64 caracteres con mayúsculas, minúsculas, números y símbolos. Se crean en tu navegador con criptografía segura.">
+<link rel="canonical" href="https://2k26luisss.github.io/matsez/generador-de-contrasenas/">
+
+<meta name="theme-color" content="#0f172a">
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="matsez">
+<meta property="og:title" content="Generador de contraseñas seguras y aleatorias (sin enviar datos)">
+<meta property="og:description" content="Genera contraseñas aleatorias y seguras de 8 a 64 caracteres con mayúsculas, minúsculas, números y símbolos. Se crean en tu navegador con criptografía segura.">
+<meta property="og:url" content="https://2k26luisss.github.io/matsez/generador-de-contrasenas/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2338bdf8'%3Em%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/matsez/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Generador de contraseñas seguras", "url": "https://2k26luisss.github.io/matsez/generador-de-contrasenas/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "es", "description": "Genera contraseñas aleatorias y seguras de 8 a 64 caracteres con mayúsculas, minúsculas, números y símbolos. Se crean en tu navegador con criptografía segura.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "COP"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://2k26luisss.github.io/matsez/"}, {"@type": "ListItem", "position": 2, "name": "Generador de contraseñas seguras", "item": "https://2k26luisss.github.io/matsez/generador-de-contrasenas/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="/matsez/">mats<span>ez</span></a>
+<nav aria-label="Principal"><a href="/matsez/#herramientas">Herramientas</a><a href="/matsez/acerca-de/">Acerca de</a><a href="/matsez/contacto/">Contacto</a></nav>
+</div></header>
+<main id="contenido" class="wrap">
+<nav class="crumbs" aria-label="Ruta"><a href="/matsez/">Inicio</a> &rsaquo; <span>Generador de contraseñas seguras</span></nav>
+<h1>Generador de contraseñas seguras</h1>
+<p class="lead">Crea contraseñas aleatorias de 8 a 64 caracteres. Se generan en tu propio dispositivo con la API criptográfica del navegador y no se envían ni se guardan en ningún servidor.</p>
+<section class="card tool" aria-labelledby="calc-h">
+<h2 id="calc-h">Calculadora</h2>
+<form data-tool="claves" novalidate>
+<div class="field"><label for="longitud">Longitud (8 a 64)</label><input id="longitud" name="longitud" type="number" step="1" inputmode="decimal" autocomplete="off" value="16" min="8" max="64"></div><div class="field check"><input type="checkbox" id="lower" name="lower" checked><label for="lower">Minúsculas (a-z)</label></div><div class="field check"><input type="checkbox" id="upper" name="upper" checked><label for="upper">Mayúsculas (A-Z)</label></div><div class="field check"><input type="checkbox" id="digits" name="digits" checked><label for="digits">Números (0-9)</label></div><div class="field check"><input type="checkbox" id="symbols" name="symbols" checked><label for="symbols">Símbolos (!@#$%&*?-_+=)</label></div>
+<button class="btn" type="submit">Calcular</button>
+<div class="result" role="status" aria-live="polite"></div>
+</form>
+
+</section>
+<article class="prose">
+<h2>Qué hace segura a una contraseña</h2>
+<p>La seguridad de una contraseña depende sobre todo de dos cosas: que sea <strong>larga</strong> y que sea <strong>impredecible</strong>. La calculadora estima su fortaleza en bits de entropía con la fórmula <code>longitud × log₂(caracteres posibles)</code>. Cada carácter adicional suma varios bits, así que alargar la clave es lo que más ayuda.</p>
+<p>Recomendaciones prácticas:</p>
+<ul>
+<li>Usa al menos 14 o 16 caracteres para cuentas importantes (correo, banco, redes).</li>
+<li>No reutilices la misma contraseña en varios sitios.</li>
+<li>Guárdalas en un gestor de contraseñas en vez de memorizarlas o escribirlas en notas sin protección.</li>
+<li>Activa la verificación en dos pasos siempre que el servicio la ofrezca.</li>
+</ul><h2>Cómo se generan las contraseñas aquí</h2>
+<p>El generador usa <code>crypto.getRandomValues</code>, una fuente de números aleatorios criptográficamente segura del navegador. A diferencia de <code>Math.random()</code>, que es predecible y no debe usarse para contraseñas, esta fuente está diseñada para seguridad. Además, el código garantiza que la clave incluya al menos un carácter de cada tipo que marcaste.</p><h2>Errores comunes al crear contraseñas</h2>
+<ul>
+<li>Usar nombres, fechas de nacimiento o palabras del diccionario con cambios simples (como «P4ssw0rd»).</li>
+<li>Compartir la misma clave entre el correo y otras cuentas: si se filtra una, quedan expuestas todas.</li>
+<li>Enviar contraseñas por chat o correo sin cifrar.</li>
+</ul>
+<h2>Preguntas frecuentes</h2>
+<details><summary>¿Se guarda o se envía la contraseña que genero?</summary><p>No. Se crea en tu navegador y solo se muestra en pantalla. Cuando cierras o recargas la página, desaparece.</p></details><details><summary>¿Qué longitud debo elegir?</summary><p>Para cuentas importantes, 16 caracteres o más con los cuatro tipos de carácter es una buena base.</p></details><details><summary>¿Puedo confiar en una contraseña generada por una página web?</summary><p>Mientras se genere localmente con una fuente criptográfica, como en esta herramienta, es seguro. Aun así, evita pegar contraseñas reales en páginas que no conozcas.</p></details>
+</article>
+<section class="related"><h2>Otras herramientas</h2><div class="grid"><a class="tool-card" href="/matsez/conversor-de-bytes/"><h3>Conversor de bytes (KB, MB, GB, TB)</h3><p>Convierte entre bytes, KB, MB, GB, TB y PB, en base 1000 o 1024.</p></a><a class="tool-card" href="/matsez/conversor-de-temperatura/"><h3>Conversor de temperatura</h3><p>Convierte entre grados Celsius, Fahrenheit y Kelvin.</p></a><a class="tool-card" href="/matsez/calculadora-de-imc/"><h3>Calculadora de IMC</h3><p>Calcula tu índice de masa corporal y el rango de peso de referencia.</p></a></div></section>
+<p class="updated">Última revisión: 31 de octubre de 2026.</p>
+</main>
+<footer><div class="wrap">
+<div class="footer-cols">
+<div><h2>Herramientas</h2><ul><li><a href="/matsez/calculadora-de-porcentajes/">Calculadora de porcentajes</a></li><li><a href="/matsez/calculadora-de-iva/">Calculadora de IVA</a></li><li><a href="/matsez/calculadora-de-propinas/">Calculadora de propinas</a></li><li><a href="/matsez/conversor-de-temperatura/">Conversor de temperatura</a></li><li><a href="/matsez/conversor-de-bytes/">Conversor de bytes (KB, MB, GB, TB)</a></li><li><a href="/matsez/generador-de-contrasenas/">Generador de contraseñas seguras</a></li><li><a href="/matsez/calculadora-de-imc/">Calculadora de IMC</a></li><li><a href="/matsez/calculadora-de-cuota-de-prestamo/">Calculadora de cuota de préstamo</a></li><li><a href="/matsez/calculadora-de-cesantias-y-prima/">Calculadora de cesantías y prima de servicios</a></li></ul></div>
+<div><h2>Sitio</h2><ul>
+<li><a href="/matsez/acerca-de/">Acerca de</a></li>
+<li><a href="/matsez/contacto/">Contacto</a></li>
+<li><a href="/matsez/privacidad/">Política de privacidad</a></li>
+<li><a href="/matsez/terminos/">Términos y condiciones</a></li>
+</ul></div>
+<div><h2>matsez</h2><p>Calculadoras y conversores gratuitos que funcionan en tu navegador, sin registro. Los resultados son orientativos.</p></div>
+</div>
+<p>&copy; 2026 matsez. Todos los derechos reservados.</p>
+</div></footer>
+<script src="/matsez/app.js" defer></script>
+</body>
+</html>

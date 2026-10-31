@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de porcentajes online: descuentos, aumentos y variación</title>
+<meta name="description" content="Calcula porcentajes al instante: el X % de un número, qué porcentaje es una cantidad de otra, aumentos, descuentos y variación porcentual. Con ejemplos resueltos.">
+<link rel="canonical" href="https://2k26luisss.github.io/matsez/calculadora-de-porcentajes/">
+
+<meta name="theme-color" content="#0f172a">
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="matsez">
+<meta property="og:title" content="Calculadora de porcentajes online: descuentos, aumentos y variación">
+<meta property="og:description" content="Calcula porcentajes al instante: el X % de un número, qué porcentaje es una cantidad de otra, aumentos, descuentos y variación porcentual. Con ejemplos resueltos.">
+<meta property="og:url" content="https://2k26luisss.github.io/matsez/calculadora-de-porcentajes/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2338bdf8'%3Em%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/matsez/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Calculadora de porcentajes", "url": "https://2k26luisss.github.io/matsez/calculadora-de-porcentajes/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "es", "description": "Calcula porcentajes al instante: el X % de un número, qué porcentaje es una cantidad de otra, aumentos, descuentos y variación porcentual. Con ejemplos resueltos.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "COP"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://2k26luisss.github.io/matsez/"}, {"@type": "ListItem", "position": 2, "name": "Calculadora de porcentajes", "item": "https://2k26luisss.github.io/matsez/calculadora-de-porcentajes/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="/matsez/">mats<span>ez</span></a>
+<nav aria-label="Principal"><a href="/matsez/#herramientas">Herramientas</a><a href="/matsez/acerca-de/">Acerca de</a><a href="/matsez/contacto/">Contacto</a></nav>
+</div></header>
+<main id="contenido" class="wrap">
+<nav class="crumbs" aria-label="Ruta"><a href="/matsez/">Inicio</a> &rsaquo; <span>Calculadora de porcentajes</span></nav>
+<h1>Calculadora de porcentajes</h1>
+<p class="lead">Resuelve las cinco operaciones con porcentajes que más se usan: sacar el porcentaje de una cantidad, saber qué porcentaje representa un valor, calcular la variación entre dos cifras y aplicar aumentos o descuentos.</p>
+<section class="card tool" aria-labelledby="calc-h">
+<h2 id="calc-h">Calculadora</h2>
+<form data-tool="porcentajes" novalidate>
+<div class="row"><div class="field"><label for="mode">¿Qué quieres calcular?</label><select id="mode" name="mode"><option value="of" selected>A % de B</option><option value="what">A es qué % de B</option><option value="change">Variación porcentual de A a B</option><option value="add">Aumentar B en A %</option><option value="sub">Disminuir B en A % (descuento)</option></select></div></div><div class="row"><div class="field"><label for="a">Valor A</label><input id="a" name="a" type="number" step="any" inputmode="decimal" autocomplete="off" placeholder="Ej: 15"></div><div class="field"><label for="b">Valor B</label><input id="b" name="b" type="number" step="any" inputmode="decimal" autocomplete="off" placeholder="Ej: 500"></div></div>
+<button class="btn" type="submit">Calcular</button>
+<div class="result" role="status" aria-live="polite"></div>
+</form>
+
+</section>
+<article class="prose">
+<h2>Cómo se calculan los porcentajes</h2>
+<p>Un porcentaje expresa una proporción sobre 100. Todas las operaciones de esta calculadora salen de unas pocas fórmulas:</p>
+<ul>
+<li><strong>A % de B:</strong> <code>B × A ÷ 100</code></li>
+<li><strong>A es qué % de B:</strong> <code>A ÷ B × 100</code></li>
+<li><strong>Variación porcentual de A a B:</strong> <code>(B − A) ÷ A × 100</code></li>
+<li><strong>Aumentar B en A %:</strong> <code>B × (1 + A ÷ 100)</code></li>
+<li><strong>Disminuir B en A %:</strong> <code>B × (1 − A ÷ 100)</code></li>
+</ul><h2>Ejemplos resueltos</h2>
+<div class="example"><p><strong>Descuento en una compra.</strong> Un televisor cuesta $1.200.000 y tiene 15 % de descuento. Elige «Disminuir B en A %» con A = 15 y B = 1200000: el descuento es $180.000 y pagas $1.020.000.</p></div>
+<div class="example"><p><strong>Qué porcentaje es.</strong> Si de 180 preguntas acertaste 45, elige «A es qué % de B» con A = 45 y B = 180: acertaste el 25 %.</p></div>
+<div class="example"><p><strong>Variación.</strong> Si tus ventas pasaron de 80 a 100 unidades, la variación es (100 − 80) ÷ 80 × 100 = 25 % de aumento.</p></div><h2>Errores frecuentes</h2>
+<p><strong>Subir y bajar el mismo porcentaje no te devuelve al inicio.</strong> Si a 200 le sumas 10 % obtienes 220, pero si a 220 le restas 10 % obtienes 198, no 200. Pasa porque el segundo porcentaje se calcula sobre una base distinta.</p>
+<p><strong>Porcentaje y puntos porcentuales no son lo mismo.</strong> Si una tasa pasa de 4 % a 6 %, sube 2 puntos porcentuales, pero el aumento relativo es de 50 %.</p>
+<h2>Preguntas frecuentes</h2>
+<details><summary>¿Cómo saco el porcentaje de un número en la calculadora?</summary><p>Elige «A % de B», escribe el porcentaje en A y el número en B. Por ejemplo, el 15 % de 500 es 75.</p></details><details><summary>¿Cómo calculo cuánto subió o bajó algo en porcentaje?</summary><p>Usa «Variación porcentual de A a B», con el valor inicial en A y el final en B. Un resultado negativo indica disminución.</p></details><details><summary>¿Puedo usar decimales?</summary><p>Sí. Escribe los decimales con punto, por ejemplo 12.5. Los resultados se muestran con el formato colombiano (coma decimal y punto de miles).</p></details>
+</article>
+<section class="related"><h2>Otras herramientas</h2><div class="grid"><a class="tool-card" href="/matsez/calculadora-de-iva/"><h3>Calculadora de IVA</h3><p>Suma o quita el IVA de un precio. Tarifa general de Colombia: 19 %.</p></a><a class="tool-card" href="/matsez/calculadora-de-propinas/"><h3>Calculadora de propinas</h3><p>Calcula la propina, el total de la cuenta y cuánto paga cada persona.</p></a><a class="tool-card" href="/matsez/calculadora-de-cuota-de-prestamo/"><h3>Calculadora de cuota de préstamo</h3><p>Calcula la cuota mensual fija, el total pagado y los intereses.</p></a></div></section>
+<p class="updated">Última revisión: 31 de octubre de 2026.</p>
+</main>
+<footer><div class="wrap">
+<div class="footer-cols">
+<div><h2>Herramientas</h2><ul><li><a href="/matsez/calculadora-de-porcentajes/">Calculadora de porcentajes</a></li><li><a href="/matsez/calculadora-de-iva/">Calculadora de IVA</a></li><li><a href="/matsez/calculadora-de-propinas/">Calculadora de propinas</a></li><li><a href="/matsez/conversor-de-temperatura/">Conversor de temperatura</a></li><li><a href="/matsez/conversor-de-bytes/">Conversor de bytes (KB, MB, GB, TB)</a></li><li><a href="/matsez/generador-de-contrasenas/">Generador de contraseñas seguras</a></li><li><a href="/matsez/calculadora-de-imc/">Calculadora de IMC</a></li><li><a href="/matsez/calculadora-de-cuota-de-prestamo/">Calculadora de cuota de préstamo</a></li><li><a href="/matsez/calculadora-de-cesantias-y-prima/">Calculadora de cesantías y prima de servicios</a></li></ul></div>
+<div><h2>Sitio</h2><ul>
+<li><a href="/matsez/acerca-de/">Acerca de</a></li>
+<li><a href="/matsez/contacto/">Contacto</a></li>
+<li><a href="/matsez/privacidad/">Política de privacidad</a></li>
+<li><a href="/matsez/terminos/">Términos y condiciones</a></li>
+</ul></div>
+<div><h2>matsez</h2><p>Calculadoras y conversores gratuitos que funcionan en tu navegador, sin registro. Los resultados son orientativos.</p></div>
+</div>
+<p>&copy; 2026 matsez. Todos los derechos reservados.</p>
+</div></footer>
+<script src="/matsez/app.js" defer></script>
+</body>
+</html>

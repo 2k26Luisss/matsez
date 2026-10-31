@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de IVA Colombia: agregar o quitar el 19 %</title>
+<meta name="description" content="Calcula el IVA de un precio: agrega el 19 % al valor base o descuenta el IVA de un total para hallar el precio sin impuesto. Tarifa editable. Con ejemplos.">
+<link rel="canonical" href="https://2k26luisss.github.io/matsez/calculadora-de-iva/">
+
+<meta name="theme-color" content="#0f172a">
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="matsez">
+<meta property="og:title" content="Calculadora de IVA Colombia: agregar o quitar el 19 %">
+<meta property="og:description" content="Calcula el IVA de un precio: agrega el 19 % al valor base o descuenta el IVA de un total para hallar el precio sin impuesto. Tarifa editable. Con ejemplos.">
+<meta property="og:url" content="https://2k26luisss.github.io/matsez/calculadora-de-iva/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2338bdf8'%3Em%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/matsez/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Calculadora de IVA", "url": "https://2k26luisss.github.io/matsez/calculadora-de-iva/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "es", "description": "Calcula el IVA de un precio: agrega el 19 % al valor base o descuenta el IVA de un total para hallar el precio sin impuesto. Tarifa editable. Con ejemplos.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "COP"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://2k26luisss.github.io/matsez/"}, {"@type": "ListItem", "position": 2, "name": "Calculadora de IVA", "item": "https://2k26luisss.github.io/matsez/calculadora-de-iva/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="/matsez/">mats<span>ez</span></a>
+<nav aria-label="Principal"><a href="/matsez/#herramientas">Herramientas</a><a href="/matsez/acerca-de/">Acerca de</a><a href="/matsez/contacto/">Contacto</a></nav>
+</div></header>
+<main id="contenido" class="wrap">
+<nav class="crumbs" aria-label="Ruta"><a href="/matsez/">Inicio</a> &rsaquo; <span>Calculadora de IVA</span></nav>
+<h1>Calculadora de IVA</h1>
+<p class="lead">Agrega el IVA a un precio o, al revés, averigua cuánto IVA incluye un valor que ya lo trae incluido. La tarifa viene en 19 %, que es la tarifa general en Colombia, y puedes cambiarla.</p>
+<section class="card tool" aria-labelledby="calc-h">
+<h2 id="calc-h">Calculadora</h2>
+<form data-tool="iva" novalidate>
+<div class="field"><label for="modo">¿Qué quieres hacer?</label><select id="modo" name="modo"><option value="agregar" selected>Agregar IVA a un valor sin IVA</option><option value="quitar">Quitar IVA de un valor con IVA incluido</option></select></div><div class="row"><div class="field"><label for="monto">Valor ($)</label><input id="monto" name="monto" type="number" step="any" inputmode="decimal" autocomplete="off" placeholder="Ej: 100000" min="0"></div><div class="field"><label for="tarifa">Tarifa de IVA (%)</label><input id="tarifa" name="tarifa" type="number" step="any" inputmode="decimal" autocomplete="off" value="19" min="0" max="100"></div></div>
+<button class="btn" type="submit">Calcular</button>
+<div class="result" role="status" aria-live="polite"></div>
+</form>
+<p class="disclaimer">Resultado orientativo. Para declaraciones o facturación consulta a un contador.</p>
+</section>
+<article class="prose">
+<h2>Cómo se calcula el IVA</h2>
+<p>El impuesto sobre las ventas (IVA) se cobra como un porcentaje sobre el valor base de un bien o servicio. Las fórmulas son:</p>
+<ul>
+<li><strong>Agregar IVA:</strong> <code>total = base × (1 + tarifa ÷ 100)</code></li>
+<li><strong>Quitar IVA:</strong> <code>base = total ÷ (1 + tarifa ÷ 100)</code></li>
+<li><strong>Valor del IVA:</strong> <code>total − base</code></li>
+</ul>
+<p>Un error común es restar el 19 % directamente del total. No funciona porque el IVA se calculó sobre la base, no sobre el total. Para quitarlo hay que dividir entre 1,19.</p><h2>Ejemplo resuelto</h2>
+<div class="example"><p>Un producto cuesta $100.000 sin IVA. Con la tarifa del 19 %, el IVA es $19.000 y el total es $119.000.</p>
+<p>Al revés: si el precio final es $119.000 y quieres saber la base, divides 119.000 ÷ 1,19 = $100.000. El IVA incluido es $19.000.</p></div><h2>Tarifas y casos especiales en Colombia</h2>
+<p>La tarifa general del IVA es 19 %. Algunos bienes y servicios tienen tarifa reducida del 5 % y otros están excluidos o exentos. En muchos restaurantes se cobra el impuesto nacional al consumo en lugar de IVA. Si no estás seguro de qué tarifa aplica a tu caso, revisa la información de la DIAN o consulta a un contador.</p>
+<p>Cambia el campo «Tarifa de IVA» para calcular con cualquier otro porcentaje.</p>
+<h2>Preguntas frecuentes</h2>
+<details><summary>¿Cuánto es el IVA en Colombia?</summary><p>La tarifa general es 19 %. Existen tarifas reducidas (como 5 %) para ciertos productos y también bienes excluidos y exentos.</p></details><details><summary>¿Cómo saco el precio sin IVA?</summary><p>Elige «Quitar IVA de un valor con IVA incluido», escribe el precio final y deja la tarifa en 19. La calculadora divide el total entre 1,19.</p></details><details><summary>¿Esta calculadora sirve para facturar?</summary><p>Sirve como apoyo para calcular. Las facturas electrónicas deben cumplir los requisitos de la DIAN, así que consulta con un contador.</p></details>
+</article>
+<section class="related"><h2>Otras herramientas</h2><div class="grid"><a class="tool-card" href="/matsez/calculadora-de-porcentajes/"><h3>Calculadora de porcentajes</h3><p>Calcula el X % de una cantidad, variaciones, aumentos y descuentos.</p></a><a class="tool-card" href="/matsez/calculadora-de-propinas/"><h3>Calculadora de propinas</h3><p>Calcula la propina, el total de la cuenta y cuánto paga cada persona.</p></a><a class="tool-card" href="/matsez/calculadora-de-cuota-de-prestamo/"><h3>Calculadora de cuota de préstamo</h3><p>Calcula la cuota mensual fija, el total pagado y los intereses.</p></a></div></section>
+<p class="updated">Última revisión: 31 de octubre de 2026.</p>
+</main>
+<footer><div class="wrap">
+<div class="footer-cols">
+<div><h2>Herramientas</h2><ul><li><a href="/matsez/calculadora-de-porcentajes/">Calculadora de porcentajes</a></li><li><a href="/matsez/calculadora-de-iva/">Calculadora de IVA</a></li><li><a href="/matsez/calculadora-de-propinas/">Calculadora de propinas</a></li><li><a href="/matsez/conversor-de-temperatura/">Conversor de temperatura</a></li><li><a href="/matsez/conversor-de-bytes/">Conversor de bytes (KB, MB, GB, TB)</a></li><li><a href="/matsez/generador-de-contrasenas/">Generador de contraseñas seguras</a></li><li><a href="/matsez/calculadora-de-imc/">Calculadora de IMC</a></li><li><a href="/matsez/calculadora-de-cuota-de-prestamo/">Calculadora de cuota de préstamo</a></li><li><a href="/matsez/calculadora-de-cesantias-y-prima/">Calculadora de cesantías y prima de servicios</a></li></ul></div>
+<div><h2>Sitio</h2><ul>
+<li><a href="/matsez/acerca-de/">Acerca de</a></li>
+<li><a href="/matsez/contacto/">Contacto</a></li>
+<li><a href="/matsez/privacidad/">Política de privacidad</a></li>
+<li><a href="/matsez/terminos/">Términos y condiciones</a></li>
+</ul></div>
+<div><h2>matsez</h2><p>Calculadoras y conversores gratuitos que funcionan en tu navegador, sin registro. Los resultados son orientativos.</p></div>
+</div>
+<p>&copy; 2026 matsez. Todos los derechos reservados.</p>
+</div></footer>
+<script src="/matsez/app.js" defer></script>
+</body>
+</html>

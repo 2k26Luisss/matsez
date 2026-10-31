@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de propinas: total de la cuenta y valor por persona</title>
+<meta name="description" content="Calcula la propina de un restaurante y divide la cuenta entre varias personas. Porcentaje editable (10 % por defecto). Gratis y sin registro.">
+<link rel="canonical" href="https://2k26luisss.github.io/matsez/calculadora-de-propinas/">
+
+<meta name="theme-color" content="#0f172a">
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="matsez">
+<meta property="og:title" content="Calculadora de propinas: total de la cuenta y valor por persona">
+<meta property="og:description" content="Calcula la propina de un restaurante y divide la cuenta entre varias personas. Porcentaje editable (10 % por defecto). Gratis y sin registro.">
+<meta property="og:url" content="https://2k26luisss.github.io/matsez/calculadora-de-propinas/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2338bdf8'%3Em%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/matsez/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Calculadora de propinas", "url": "https://2k26luisss.github.io/matsez/calculadora-de-propinas/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "es", "description": "Calcula la propina de un restaurante y divide la cuenta entre varias personas. Porcentaje editable (10 % por defecto). Gratis y sin registro.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "COP"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://2k26luisss.github.io/matsez/"}, {"@type": "ListItem", "position": 2, "name": "Calculadora de propinas", "item": "https://2k26luisss.github.io/matsez/calculadora-de-propinas/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="/matsez/">mats<span>ez</span></a>
+<nav aria-label="Principal"><a href="/matsez/#herramientas">Herramientas</a><a href="/matsez/acerca-de/">Acerca de</a><a href="/matsez/contacto/">Contacto</a></nav>
+</div></header>
+<main id="contenido" class="wrap">
+<nav class="crumbs" aria-label="Ruta"><a href="/matsez/">Inicio</a> &rsaquo; <span>Calculadora de propinas</span></nav>
+<h1>Calculadora de propinas</h1>
+<p class="lead">Escribe el valor de la cuenta y el porcentaje de propina que quieras dejar. La calculadora te muestra la propina, el total y lo que le toca a cada persona si dividen la cuenta.</p>
+<section class="card tool" aria-labelledby="calc-h">
+<h2 id="calc-h">Calculadora</h2>
+<form data-tool="propinas" novalidate>
+<div class="field"><label for="cuenta">Valor de la cuenta ($)</label><input id="cuenta" name="cuenta" type="number" step="any" inputmode="decimal" autocomplete="off" placeholder="Ej: 80000" min="0"></div><div class="row"><div class="field"><label for="pct">Propina (%)</label><input id="pct" name="pct" type="number" step="any" inputmode="decimal" autocomplete="off" value="10" min="0" max="100"></div><div class="field"><label for="personas">Personas</label><input id="personas" name="personas" type="number" step="1" inputmode="decimal" autocomplete="off" value="1" min="1" max="100"></div></div>
+<button class="btn" type="submit">Calcular</button>
+<div class="result" role="status" aria-live="polite"></div>
+</form>
+
+</section>
+<article class="prose">
+<h2>Cómo funciona</h2>
+<ul>
+<li><code>propina = cuenta × porcentaje ÷ 100</code></li>
+<li><code>total = cuenta + propina</code></li>
+<li><code>por persona = total ÷ número de personas</code></li>
+</ul><h2>Ejemplo resuelto</h2>
+<div class="example"><p>La cuenta de un restaurante es de $80.000 y decides dejar el 10 %. La propina es $8.000 y el total es $88.000. Si son 4 personas, cada una paga $22.000.</p></div><h2>La propina en restaurantes de Colombia</h2>
+<p>En Colombia la propina en restaurantes está regulada por la Ley 1935 de 2018. En términos generales, el establecimiento puede sugerir un valor (usualmente el 10 %), pero dejarla es voluntario y es el cliente quien decide si la paga y por cuánto. Confirma en la cuenta si el restaurante ya incluyó algún valor sugerido antes de sumarlo otra vez.</p>
+<h2>Preguntas frecuentes</h2>
+<details><summary>¿Cuánto es la propina habitual en Colombia?</summary><p>El valor sugerido en restaurantes suele ser el 10 % de la cuenta, pero es voluntario. Puedes dejar más, menos o ninguna según el servicio.</p></details><details><summary>¿Cómo divido la cuenta entre varias personas?</summary><p>Escribe cuántas personas son y la calculadora divide el total (cuenta más propina) en partes iguales.</p></details><details><summary>¿Puedo calcular una propina distinta al 10 %?</summary><p>Sí, cambia el campo «Propina (%)» por el valor que prefieras, incluso con decimales.</p></details>
+</article>
+<section class="related"><h2>Otras herramientas</h2><div class="grid"><a class="tool-card" href="/matsez/calculadora-de-porcentajes/"><h3>Calculadora de porcentajes</h3><p>Calcula el X % de una cantidad, variaciones, aumentos y descuentos.</p></a><a class="tool-card" href="/matsez/calculadora-de-iva/"><h3>Calculadora de IVA</h3><p>Suma o quita el IVA de un precio. Tarifa general de Colombia: 19 %.</p></a><a class="tool-card" href="/matsez/calculadora-de-cuota-de-prestamo/"><h3>Calculadora de cuota de préstamo</h3><p>Calcula la cuota mensual fija, el total pagado y los intereses.</p></a></div></section>
+<p class="updated">Última revisión: 31 de octubre de 2026.</p>
+</main>
+<footer><div class="wrap">
+<div class="footer-cols">
+<div><h2>Herramientas</h2><ul><li><a href="/matsez/calculadora-de-porcentajes/">Calculadora de porcentajes</a></li><li><a href="/matsez/calculadora-de-iva/">Calculadora de IVA</a></li><li><a href="/matsez/calculadora-de-propinas/">Calculadora de propinas</a></li><li><a href="/matsez/conversor-de-temperatura/">Conversor de temperatura</a></li><li><a href="/matsez/conversor-de-bytes/">Conversor de bytes (KB, MB, GB, TB)</a></li><li><a href="/matsez/generador-de-contrasenas/">Generador de contraseñas seguras</a></li><li><a href="/matsez/calculadora-de-imc/">Calculadora de IMC</a></li><li><a href="/matsez/calculadora-de-cuota-de-prestamo/">Calculadora de cuota de préstamo</a></li><li><a href="/matsez/calculadora-de-cesantias-y-prima/">Calculadora de cesantías y prima de servicios</a></li></ul></div>
+<div><h2>Sitio</h2><ul>
+<li><a href="/matsez/acerca-de/">Acerca de</a></li>
+<li><a href="/matsez/contacto/">Contacto</a></li>
+<li><a href="/matsez/privacidad/">Política de privacidad</a></li>
+<li><a href="/matsez/terminos/">Términos y condiciones</a></li>
+</ul></div>
+<div><h2>matsez</h2><p>Calculadoras y conversores gratuitos que funcionan en tu navegador, sin registro. Los resultados son orientativos.</p></div>
+</div>
+<p>&copy; 2026 matsez. Todos los derechos reservados.</p>
+</div></footer>
+<script src="/matsez/app.js" defer></script>
+</body>
+</html>

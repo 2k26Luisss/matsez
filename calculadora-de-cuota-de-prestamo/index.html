@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de cuota de préstamo: cuota fija mensual e intereses</title>
+<meta name="description" content="Calcula la cuota mensual de un crédito con cuota fija a partir del monto, la tasa (efectiva anual o mensual) y el plazo. Muestra total a pagar e intereses.">
+<link rel="canonical" href="https://2k26luisss.github.io/matsez/calculadora-de-cuota-de-prestamo/">
+
+<meta name="theme-color" content="#0f172a">
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="matsez">
+<meta property="og:title" content="Calculadora de cuota de préstamo: cuota fija mensual e intereses">
+<meta property="og:description" content="Calcula la cuota mensual de un crédito con cuota fija a partir del monto, la tasa (efectiva anual o mensual) y el plazo. Muestra total a pagar e intereses.">
+<meta property="og:url" content="https://2k26luisss.github.io/matsez/calculadora-de-cuota-de-prestamo/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2338bdf8'%3Em%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/matsez/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Calculadora de cuota de préstamo", "url": "https://2k26luisss.github.io/matsez/calculadora-de-cuota-de-prestamo/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "es", "description": "Calcula la cuota mensual de un crédito con cuota fija a partir del monto, la tasa (efectiva anual o mensual) y el plazo. Muestra total a pagar e intereses.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "COP"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://2k26luisss.github.io/matsez/"}, {"@type": "ListItem", "position": 2, "name": "Calculadora de cuota de préstamo", "item": "https://2k26luisss.github.io/matsez/calculadora-de-cuota-de-prestamo/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="/matsez/">mats<span>ez</span></a>
+<nav aria-label="Principal"><a href="/matsez/#herramientas">Herramientas</a><a href="/matsez/acerca-de/">Acerca de</a><a href="/matsez/contacto/">Contacto</a></nav>
+</div></header>
+<main id="contenido" class="wrap">
+<nav class="crumbs" aria-label="Ruta"><a href="/matsez/">Inicio</a> &rsaquo; <span>Calculadora de cuota de préstamo</span></nav>
+<h1>Calculadora de cuota de préstamo</h1>
+<p class="lead">Calcula la cuota mensual de un crédito de cuota fija, el total que pagarás y cuánto serán intereses. Puedes ingresar la tasa como efectiva anual (E.A.), que es como suelen publicarla las entidades en Colombia, o como tasa mensual.</p>
+<section class="card tool" aria-labelledby="calc-h">
+<h2 id="calc-h">Calculadora</h2>
+<form data-tool="prestamo" novalidate>
+<div class="field"><label for="monto">Monto del préstamo ($)</label><input id="monto" name="monto" type="number" step="any" inputmode="decimal" autocomplete="off" placeholder="Ej: 10000000" min="0"></div><div class="row"><div class="field"><label for="tasa">Tasa de interés (%)</label><input id="tasa" name="tasa" type="number" step="any" inputmode="decimal" autocomplete="off" placeholder="Ej: 18" min="0" max="200"></div><div class="field"><label for="tipo">Tipo de tasa</label><select id="tipo" name="tipo"><option value="ea" selected>Efectiva anual (E.A.)</option><option value="mensual">Mensual vencida</option></select></div></div><div class="field"><label for="plazo">Plazo (meses)</label><input id="plazo" name="plazo" type="number" step="1" inputmode="decimal" autocomplete="off" placeholder="Ej: 24" min="1" max="600"></div>
+<button class="btn" type="submit">Calcular</button>
+<div class="result" role="status" aria-live="polite"></div>
+</form>
+<p class="disclaimer">Es una simulación. El valor real puede variar por seguros, comisiones y políticas de cada entidad.</p>
+</section>
+<article class="prose">
+<h2>Cómo se calcula la cuota</h2>
+<p>En un crédito de cuota fija (sistema francés) pagas el mismo valor cada mes. La cuota se calcula con:</p>
+<p><code>cuota = P × i ÷ (1 − (1 + i)^−n)</code></p>
+<ul>
+<li><strong>P:</strong> monto prestado</li>
+<li><strong>i:</strong> tasa de interés mensual (en decimal)</li>
+<li><strong>n:</strong> número de cuotas (meses)</li>
+</ul>
+<p>Si la tasa está expresada como efectiva anual, primero se convierte a mensual con <code>i = (1 + E.A.)^(1/12) − 1</code>. No se divide entre 12, porque eso subestimaría la tasa real.</p><h2>Ejemplo resuelto</h2>
+<div class="example"><p>Un préstamo de $10.000.000 a 24 meses con una tasa del 18 % E.A.:</p>
+<p>Tasa mensual equivalente ≈ 1,3888 %. Cuota mensual ≈ <strong>$492.820</strong>. Total pagado ≈ $11.827.676, de los cuales $1.827.676 son intereses.</p></div><h2>Qué no incluye este cálculo</h2>
+<p>Los créditos reales suelen sumar seguros de vida y deudores, cuotas de manejo, comisiones o costos de estudio. Revisa siempre el costo total del crédito que te informe la entidad y compara varias ofertas antes de decidir. En Colombia, las tasas de interés tienen un límite legal (tasa de usura) que certifica la Superintendencia Financiera.</p>
+<h2>Preguntas frecuentes</h2>
+<details><summary>¿Qué diferencia hay entre tasa E.A. y tasa mensual?</summary><p>La efectiva anual refleja el costo del año completo considerando la capitalización; la mensual es la que se aplica cada mes. No son equivalentes por simple división.</p></details><details><summary>¿Por qué mi banco me cobra más que esta calculadora?</summary><p>Probablemente por seguros, comisiones u otros costos que se suman a la cuota. Pide el detalle de la liquidación.</p></details><details><summary>¿Sirve para créditos de vehículo, libre inversión o vivienda?</summary><p>Para cualquier crédito de cuota fija en pesos. Los créditos con UVR o tasa variable tendrán cuotas que cambian en el tiempo.</p></details>
+</article>
+<section class="related"><h2>Otras herramientas</h2><div class="grid"><a class="tool-card" href="/matsez/calculadora-de-iva/"><h3>Calculadora de IVA</h3><p>Suma o quita el IVA de un precio. Tarifa general de Colombia: 19 %.</p></a><a class="tool-card" href="/matsez/calculadora-de-porcentajes/"><h3>Calculadora de porcentajes</h3><p>Calcula el X % de una cantidad, variaciones, aumentos y descuentos.</p></a><a class="tool-card" href="/matsez/calculadora-de-cesantias-y-prima/"><h3>Calculadora de cesantías y prima de servicios</h3><p>Estima cesantías, intereses y prima de servicios con la fórmula legal en Colombia.</p></a></div></section>
+<p class="updated">Última revisión: 31 de octubre de 2026.</p>
+</main>
+<footer><div class="wrap">
+<div class="footer-cols">
+<div><h2>Herramientas</h2><ul><li><a href="/matsez/calculadora-de-porcentajes/">Calculadora de porcentajes</a></li><li><a href="/matsez/calculadora-de-iva/">Calculadora de IVA</a></li><li><a href="/matsez/calculadora-de-propinas/">Calculadora de propinas</a></li><li><a href="/matsez/conversor-de-temperatura/">Conversor de temperatura</a></li><li><a href="/matsez/conversor-de-bytes/">Conversor de bytes (KB, MB, GB, TB)</a></li><li><a href="/matsez/generador-de-contrasenas/">Generador de contraseñas seguras</a></li><li><a href="/matsez/calculadora-de-imc/">Calculadora de IMC</a></li><li><a href="/matsez/calculadora-de-cuota-de-prestamo/">Calculadora de cuota de préstamo</a></li><li><a href="/matsez/calculadora-de-cesantias-y-prima/">Calculadora de cesantías y prima de servicios</a></li></ul></div>
+<div><h2>Sitio</h2><ul>
+<li><a href="/matsez/acerca-de/">Acerca de</a></li>
+<li><a href="/matsez/contacto/">Contacto</a></li>
+<li><a href="/matsez/privacidad/">Política de privacidad</a></li>
+<li><a href="/matsez/terminos/">Términos y condiciones</a></li>
+</ul></div>
+<div><h2>matsez</h2><p>Calculadoras y conversores gratuitos que funcionan en tu navegador, sin registro. Los resultados son orientativos.</p></div>
+</div>
+<p>&copy; 2026 matsez. Todos los derechos reservados.</p>
+</div></footer>
+<script src="/matsez/app.js" defer></script>
+</body>
+</html>

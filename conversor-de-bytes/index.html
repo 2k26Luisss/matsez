@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversor de bytes: KB, MB, GB y TB (base 1000 y 1024)</title>
+<meta name="description" content="Convierte almacenamiento digital entre B, KB, MB, GB, TB y PB. Elige base decimal (1000) o binaria (1024 / KiB, MiB, GiB). Con explicación de la diferencia.">
+<link rel="canonical" href="https://2k26luisss.github.io/matsez/conversor-de-bytes/">
+
+<meta name="theme-color" content="#0f172a">
+<meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="matsez">
+<meta property="og:title" content="Conversor de bytes: KB, MB, GB y TB (base 1000 y 1024)">
+<meta property="og:description" content="Convierte almacenamiento digital entre B, KB, MB, GB, TB y PB. Elige base decimal (1000) o binaria (1024 / KiB, MiB, GiB). Con explicación de la diferencia.">
+<meta property="og:url" content="https://2k26luisss.github.io/matsez/conversor-de-bytes/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f172a'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2338bdf8'%3Em%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="/matsez/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Conversor de bytes (KB, MB, GB, TB)", "url": "https://2k26luisss.github.io/matsez/conversor-de-bytes/", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "inLanguage": "es", "description": "Convierte almacenamiento digital entre B, KB, MB, GB, TB y PB. Elige base decimal (1000) o binaria (1024 / KiB, MiB, GiB). Con explicación de la diferencia.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "COP"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://2k26luisss.github.io/matsez/"}, {"@type": "ListItem", "position": 2, "name": "Conversor de bytes (KB, MB, GB, TB)", "item": "https://2k26luisss.github.io/matsez/conversor-de-bytes/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="/matsez/">mats<span>ez</span></a>
+<nav aria-label="Principal"><a href="/matsez/#herramientas">Herramientas</a><a href="/matsez/acerca-de/">Acerca de</a><a href="/matsez/contacto/">Contacto</a></nav>
+</div></header>
+<main id="contenido" class="wrap">
+<nav class="crumbs" aria-label="Ruta"><a href="/matsez/">Inicio</a> &rsaquo; <span>Conversor de bytes (KB, MB, GB, TB)</span></nav>
+<h1>Conversor de bytes</h1>
+<p class="lead">Convierte tamaños de archivos y almacenamiento entre bytes, kilobytes, megabytes, gigabytes, terabytes y petabytes. Puedes elegir el estándar decimal (1 GB = 1000 MB) o el binario (1 GiB = 1024 MiB).</p>
+<section class="card tool" aria-labelledby="calc-h">
+<h2 id="calc-h">Calculadora</h2>
+<form data-tool="datos" novalidate>
+<div class="field"><label for="valor">Valor</label><input id="valor" name="valor" type="number" step="any" inputmode="decimal" autocomplete="off" placeholder="Ej: 500" min="0"></div><div class="row"><div class="field"><label for="de">De</label><select id="de" name="de"><option value="B">B</option><option value="KB">KB</option><option value="MB">MB</option><option value="GB" selected>GB</option><option value="TB">TB</option><option value="PB">PB</option></select></div><div class="field"><label for="a">A</label><select id="a" name="a"><option value="B">B</option><option value="KB">KB</option><option value="MB" selected>MB</option><option value="GB">GB</option><option value="TB">TB</option><option value="PB">PB</option></select></div></div><div class="field"><label for="estandar">Estándar</label><select id="estandar" name="estandar"><option value="decimal" selected>Decimal (1 KB = 1000 B)</option><option value="binario">Binario (1 KiB = 1024 B)</option></select></div>
+<button class="btn" type="submit">Calcular</button>
+<div class="result" role="status" aria-live="polite"></div>
+</form>
+
+</section>
+<article class="prose">
+<h2>Decimal frente a binario</h2>
+<p>Existen dos formas de contar el almacenamiento digital, y por eso a veces los números no coinciden:</p>
+<ul>
+<li><strong>Decimal (SI):</strong> cada unidad vale 1000 veces la anterior. 1 KB = 1000 B, 1 MB = 1000 KB, 1 GB = 1000 MB. Lo usan los fabricantes de discos duros, memorias USB y SSD.</li>
+<li><strong>Binario (IEC):</strong> cada unidad vale 1024 veces la anterior. 1 KiB = 1024 B, 1 MiB = 1024 KiB, 1 GiB = 1024 MiB. Es como muchos sistemas operativos calculan el espacio, aunque a veces lo muestran con la etiqueta «GB».</li>
+</ul><h2>Ejemplo: por qué tu disco de 500 GB muestra menos</h2>
+<div class="example"><p>Un disco de «500 GB» tiene 500.000.000.000 bytes. Si el sistema lo expresa en unidades binarias, divide entre 1.073.741.824 (1 GiB) y muestra aproximadamente <strong>465,66 GiB</strong>. No falta espacio: son dos formas distintas de medir lo mismo.</p></div><h2>Cómo usar el conversor</h2>
+<ol>
+<li>Escribe el valor que quieres convertir.</li>
+<li>Selecciona la unidad de origen y la de destino.</li>
+<li>Elige si quieres el estándar decimal o el binario y pulsa «Calcular».</li>
+</ol>
+<h2>Preguntas frecuentes</h2>
+<details><summary>¿Cuántos MB tiene un GB?</summary><p>En estándar decimal, 1 GB tiene 1000 MB. En el binario, 1 GiB tiene 1024 MiB.</p></details><details><summary>¿Cuántos bytes tiene un KB?</summary><p>1000 bytes en el estándar decimal y 1024 en el binario (1 KiB).</p></details><details><summary>¿Cuál debo usar?</summary><p>Si comparas con lo que dice la caja de un disco o plan de datos, usa decimal. Si comparas con el espacio que muestra tu computador, prueba el binario.</p></details>
+</article>
+<section class="related"><h2>Otras herramientas</h2><div class="grid"><a class="tool-card" href="/matsez/conversor-de-temperatura/"><h3>Conversor de temperatura</h3><p>Convierte entre grados Celsius, Fahrenheit y Kelvin.</p></a><a class="tool-card" href="/matsez/generador-de-contrasenas/"><h3>Generador de contraseñas seguras</h3><p>Crea contraseñas aleatorias seguras directamente en tu navegador.</p></a><a class="tool-card" href="/matsez/calculadora-de-porcentajes/"><h3>Calculadora de porcentajes</h3><p>Calcula el X % de una cantidad, variaciones, aumentos y descuentos.</p></a></div></section>
+<p class="updated">Última revisión: 31 de octubre de 2026.</p>
+</main>
+<footer><div class="wrap">
+<div class="footer-cols">
+<div><h2>Herramientas</h2><ul><li><a href="/matsez/calculadora-de-porcentajes/">Calculadora de porcentajes</a></li><li><a href="/matsez/calculadora-de-iva/">Calculadora de IVA</a></li><li><a href="/matsez/calculadora-de-propinas/">Calculadora de propinas</a></li><li><a href="/matsez/conversor-de-temperatura/">Conversor de temperatura</a></li><li><a href="/matsez/conversor-de-bytes/">Conversor de bytes (KB, MB, GB, TB)</a></li><li><a href="/matsez/generador-de-contrasenas/">Generador de contraseñas seguras</a></li><li><a href="/matsez/calculadora-de-imc/">Calculadora de IMC</a></li><li><a href="/matsez/calculadora-de-cuota-de-prestamo/">Calculadora de cuota de préstamo</a></li><li><a href="/matsez/calculadora-de-cesantias-y-prima/">Calculadora de cesantías y prima de servicios</a></li></ul></div>
+<div><h2>Sitio</h2><ul>
+<li><a href="/matsez/acerca-de/">Acerca de</a></li>
+<li><a href="/matsez/contacto/">Contacto</a></li>
+<li><a href="/matsez/privacidad/">Política de privacidad</a></li>
+<li><a href="/matsez/terminos/">Términos y condiciones</a></li>
+</ul></div>
+<div><h2>matsez</h2><p>Calculadoras y conversores gratuitos que funcionan en tu navegador, sin registro. Los resultados son orientativos.</p></div>
+</div>
+<p>&copy; 2026 matsez. Todos los derechos reservados.</p>
+</div></footer>
+<script src="/matsez/app.js" defer></script>
+</body>
+</html>
